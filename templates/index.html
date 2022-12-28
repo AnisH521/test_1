@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" contents = "width = device-width, initial-scale = 0.1">
+
+        <title>Movie Review Classification</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    </head>
+
+    <body>
+        <div class="login">
+
+            <form action="{{ url_for('classify')}}" method="post">
+                <label>
+                    <h1>Movie Review Classifier</h1>
+                </label>
+
+                <br>
+                <br>
+                <input type="text" id="review" name="review" placeholder="Enter the review here" required = "required" />
+
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>{{ prediction_text }}</h3>
+
+        </div>
+    </body>
+</html>
