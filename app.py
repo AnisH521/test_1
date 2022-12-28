@@ -3,34 +3,25 @@ import os
 import bz2
 import pickle
 import _pickle as cPickle
-import gdown
 
 app = Flask(__name__)
 
 #loaded_model = pickle.load(open("model/model.pkl", "rb"))
 #loaded_vectorizer = pickle.load(open('model/vec.pkl', 'rb'))
 
-def decompress_pickle(file):
+def decompress_pickle(directory, file):
 
-    #os.chdir(directory)
+    os.chdir(directory)
 
     data = bz2.BZ2File(file, "rb")
     data = cPickle.load(data)
 
-    #os.chdir("../")
+    os.chdir("../")
 
     return data
 
-url = 'https://drive.google.com/uc?id=1ZN7tJSS7el2APXwd2hjPqNznb_ewmhud'
-loaded_vectorizer = '/tmp/vec.pbz2'
-gdown.download(url, loaded_vectorizer, quiet=False)
-loaded_vectorizer = decompress_pickle(loaded_vectorizer)
-
-url = 'https://drive.google.com/uc?id=1zSbaGwyg0j6X3Q5IjVycUXJ8LolVqPeV'
-loaded_model = '/tmp/model.pbz2'
-gdown.download(url, loaded_model, quiet=False)
-loaded_model = decompress_pickle(loaded_model)
-
+loaded_model = decompress_pickle("model", "model.pbz2")
+loaded_vectorizer = decompress_pickle("vectorizer", "vec.pbz2")
 
 @app.route("/")
 def home():
@@ -46,4 +37,4 @@ def classify():
         return render_template("index.html", prediction_text = f"The Entered Movie Review is {output}")
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
