@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 $ gunicorn app:app
 ```
 ## Libraries Used
-* provided inside requirements.txt
+provided inside requirements.txt
 
 ## Analysis
 https://www.kaggle.com/code/anishnaskar/text-classification-using-multinomial-naive-bayes/edit
