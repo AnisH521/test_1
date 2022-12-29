@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 $ gunicorn app:app
 ```
 
-link to app 👇🏽
+link to app 👉🏽
 https://text-classifier-v3.onrender.com/
 
 ## Libraries Used
