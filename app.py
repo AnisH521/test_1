@@ -21,12 +21,12 @@ def decompress_pickle(file):
 
     return data
 
-url = 'https://drive.google.com/uc?id=12yMGBY-8vyoeul94nuNCPkb7F7FrmJVS'
+url = 'https://drive.google.com/uc?id=1a_vj41AB8Y7UXU9hmLVjzYG4KKFG1b-e'
 loaded_vectorizer = 'vectorizer/vec.pbz2'
 gdown.download(url, loaded_vectorizer, quiet = False)
 loaded_vectorizer = decompress_pickle(loaded_vectorizer)
 
-url = "https://drive.google.com/uc?id=1_FTgSc6Mc6t93SSaB_xP5KuxAEJ-EqSW"
+url = "https://drive.google.com/uc?id=1cXhQqfRpyf6eB4r8ws43YwCFWgoEgBgi"
 loaded_model = 'model/model.pbz2'
 gdown.download(url, loaded_model, quiet = False)
 loaded_model = decompress_pickle(loaded_model)
