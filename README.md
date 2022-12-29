@@ -14,4 +14,4 @@ $ gunicorn app:app
 provided inside requirements.txt
 
 ## Analysis
-https://www.kaggle.com/code/anishnaskar/text-classification-using-multinomial-naive-bayes/edit
+https://www.kaggle.com/code/anishnaskar/text-classification-v0-4
