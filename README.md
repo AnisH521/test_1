@@ -10,6 +10,10 @@ $ cd text_classifier_v3
 $ pip install -r requirements.txt
 $ gunicorn app:app
 ```
+
+link to app 👇🏽
+https://text-classifier-v3.onrender.com/
+
 ## Libraries Used
 provided inside requirements.txt
 
